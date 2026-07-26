@@ -1,0 +1,11 @@
+# Workflow SANS cron : Cronwake ne doit PAS le surveiller (aucune ligne schedule).
+# Sert a verifier qu'il n'y a pas de bruit : seuls les workflows planifies comptent.
+name: no-cron
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Not a cron
+        run: echo "this workflow has no schedule and must not appear in Cronwake"

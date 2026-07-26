@@ -1,0 +1,13 @@
+# Cron frequent : c'est LUI qui montre la detection reelle. GitHub sous-execute
+# notoirement les crons */5 : Cronwake doit le marquer "late" puis "missed" tout seul.
+name: every-5-min
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tick
+        run: date -u

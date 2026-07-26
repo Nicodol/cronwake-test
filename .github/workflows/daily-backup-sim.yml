@@ -1,0 +1,14 @@
+# Cron quotidien a 07:00 UTC : au moment de l'installation (apres 07:00), sa prochaine
+# echeance est DEMAIN. Il doit apparaitre dans Cronwake comme surveille alors qu'il n'a
+# JAMAIS tourne : c'est la couverture "jour zero", qu'aucun outil a ping ne peut faire.
+name: daily-backup-sim
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate a nightly backup
+        run: echo "backup done at $(date -u)"

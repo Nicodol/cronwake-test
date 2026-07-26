@@ -1,0 +1,12 @@
+# Cron horaire (minute 13, decalee : bonne pratique pour eviter la cohue de l'heure pile).
+name: hourly-sync-sim
+on:
+  schedule:
+    - cron: "13 * * * *"
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate a sync
+        run: echo "sync done at $(date -u)"

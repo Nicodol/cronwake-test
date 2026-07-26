@@ -1,0 +1,10 @@
+name: discovery-e2e
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch: {}
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo discovery e2e ok

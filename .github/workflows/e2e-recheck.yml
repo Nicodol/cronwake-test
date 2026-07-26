@@ -1,0 +1,11 @@
+name: e2e-recheck
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "e2e recheck tick"

@@ -9,3 +9,5 @@ jobs:
     steps:
       - name: Not a cron
         run: echo "this workflow has no schedule and must not appear in Cronwake"
+
+# touch to force workflow registration

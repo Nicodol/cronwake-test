@@ -1,9 +1,0 @@
-name: e2e-recheck
-on:
-  workflow_dispatch: {}
-
-jobs:
-  tick:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "e2e recheck tick"

@@ -10,3 +10,5 @@ jobs:
     steps:
       - name: Simulate a sync
         run: echo "sync done at $(date -u)"
+
+# registered

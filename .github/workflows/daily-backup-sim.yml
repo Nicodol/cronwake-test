@@ -12,3 +12,5 @@ jobs:
     steps:
       - name: Simulate a nightly backup
         run: echo "backup done at $(date -u)"
+
+# registered

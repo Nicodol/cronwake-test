@@ -1,0 +1,12 @@
+name: tz-demo
+on:
+  schedule:
+    - cron: "30 5 * * *"
+      timezone: "America/New_York"
+  workflow_dispatch: {}
+
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "timezone-aware schedule"
